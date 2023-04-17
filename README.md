@@ -1,6 +1,6 @@
 # Video microservice
 
-Receive request for video file processing (in pubsub) and helps to:
+Receiving request for video file processing (in pubsub) and helps to:
 
 1. generate thumbnail if necessary
 2. compress thumbnail into 3 different qualities if necessary
