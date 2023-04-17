@@ -1,0 +1,38 @@
+steps:
+  - id: BUILD
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - "--no-cache"
+      - "--network=cloudbuild"
+      - "-t"
+      - $_IMAGE_NAME
+      - .
+      - "-f"
+      - Dockerfile
+
+  - id: PUSH
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - $_IMAGE_NAME
+
+  - id: DEPLOY
+    name: "gcr.io/google.com/cloudsdktool/cloud-sdk:slim"
+    entrypoint: gcloud
+    args:
+      - run
+      - services
+      - update
+      - $_SERVICE_NAME
+      - "--image=$_IMAGE_NAME"
+      - "--region=$_DEPLOY_REGION"
+      - "--quiet"
+
+images:
+  - $_IMAGE_NAME
+
+substitutions:
+  _DEPLOY_REGION: us-central1
+  _SERVICE_NAME: video
+  _IMAGE_NAME: "us.gcr.io/${PROJECT_ID}/${REPO_NAME}/${_SERVICE_NAME}:${COMMIT_SHA}"
