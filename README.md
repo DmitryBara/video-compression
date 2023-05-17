@@ -12,4 +12,4 @@ Article describing the whole photo and video processing pipeline is [here](https
 
 ![Architecture Schema](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LageXJCBgNoeCWhf82jhSw.jpeg)
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+https://user-images.githubusercontent.com/64595561/232421891-316f282e-ea2c-4c54-bb9d-0a1bc01e535c.mp4
