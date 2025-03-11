@@ -1,6 +1,8 @@
-# Video microservice
+# Video compression microservice
 
-Receiving request for video file processing (in pubsub) and helps to:
+Sometimes original videos uploaded by users are too big, and its unoptimal to deliver it to other users device in initial state. We want to compress it to decrease network usage and improve end user experience.
+
+This microservice receiving original video url in request (coming through pubsub), downloads it, and compress using ffmpeg library:
 
 1. generate thumbnail if necessary
 2. compress thumbnail into 3 different qualities if necessary
