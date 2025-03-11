@@ -6,7 +6,9 @@ Receiving request for video file processing (in pubsub) and helps to:
 2. compress thumbnail into 3 different qualities if necessary
 3. compress video into 2 different qualities
 
-Article describing the whole photo and video processing pipeline is [here](https://dmitry-barabash.medium.com/photo-and-video-compression-pipeline-in-modern-web-applications-921fa2988628).
+ATTENTION: 
+This is just one part of media processing system!
+Article describing the whole system is [here](https://dmitry-barabash.medium.com/photo-and-video-compression-pipeline-in-modern-web-applications-921fa2988628).
 
 ## Demonstration
 
